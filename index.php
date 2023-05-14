@@ -618,7 +618,7 @@ h1 {
 		<h1 class="text-light brand mt-2">
 			<img src="assets/images/airtic.png" 
 				height="105px" width="105px" alt="">				
-		Online Flight Booking</h1>
+		Check Available Flight</h1>
 		<div class="sap_tabs">			
 			<div id="horizontalTab">
 				<ul class="resp-tabs-list">
@@ -882,8 +882,8 @@ div.card {
 	<em><h5 class="text-light text-center p-0 brand mt-2">
 				<img src="assets/images/airtic.png" 
 					height="40px" width="40px" alt="">				
-			Online Flight Booking</h5></em>
-	<div class="text-light text-center">&copy; <?php echo date('Y')?> - Developed By Sujoy Dcunha, Christina Pereira, Mark Coutinho<br><br></div>
+		Check Available Flight</h5></em>
+	<div class="text-light text-center">&copy; <?php echo date('Y')?> - Developed By Shitta<br><br></div>
 	<!-- <p>----------</p> -->
 	
 	</footer>	

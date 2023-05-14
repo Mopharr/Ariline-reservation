@@ -159,7 +159,7 @@ h1 {
                             <div class="row ">                                                     
                                 <div class="col">
                                     <h2 class="text-secondary mb-0 brand">
-                                        Online Flight Booking</h2> 
+                                      Check Available Flight</h2> 
                                 </div>
                                 <div class="col">
                                     <h2 class="mb-0">'.$class_txt.' CLASS</h2>
@@ -218,7 +218,7 @@ h1 {
                             <div class="row">  
                                 <div class="col">                                    
                                 <h2 class="text-light text-center brand">
-                                    Online Flight Booking</h2> 
+                                   Check Available Flight</h2> 
                                 </div>                                      
                             </div>                             
                             <div class="row justify-content-center">

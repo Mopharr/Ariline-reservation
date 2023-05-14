@@ -14,7 +14,7 @@ session_start();
         <!-- Bootstrap CSS -->
 		<!-- log on to codeastro.com for more projects -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <title>Online Flight Booking</title>         
+        <title>Available Flight</title>         
         <link rel = "icon" href ="../assets/images/brand.png"  type = "image/x-icon">       
     </head>
 <style>
@@ -43,9 +43,16 @@ h5 {
     font-weight: bold;
 	font-family: 'Montserrat', sans-serif;    
 }
+.testing {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
 </style>
     <body>        
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent testing">
         <a class="navbar-brand" href="index.php"><h5>Home</h5>            
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -55,35 +62,12 @@ h5 {
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">                                
-            <?php if(isset($_SESSION['userId'])) { ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="my_flights.php">
-                        <h5> My Flights</h5>
-                    </a>
-                </li>       
-                <li class="nav-item">
-                    <a class="nav-link" href="ticket.php">
-                        <h5> Tickets</h5>
-                    </a>
-                </li>    <!-- log on to codeastro.com for more projects -->                                                              
-            <?php } ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="feedback.php">
-                        <h5> Feedback</h5>
-                    </a>
-                </li>   
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <h5> About</h5>
-                    </a>
-                </li>             
-            </ul>    <!-- log on to codeastro.com for more projects -->       
+        <div class="collapse navbar-collapse anTest" id="navbarSupportedContent">
+             <!-- log on to codeastro.com for more projects -->       
             <?php
             if(isset($_SESSION['userId'])) {
                 echo '
-                <ul  class="nav navbar-nav navbar-right">
+                <ul  class="nav ">
                     <li class="nav-item mr-3">
                             
                             <h5 class=" text-light">

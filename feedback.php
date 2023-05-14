@@ -261,6 +261,6 @@ if(isset($_GET['error'])) {
 	<em><h5 class="text-light text-center p-0 brand mt-2">
 				<img src="assets/images/airtic.png" 
 					height="40px" width="40px" alt="">				
-			Online Flight Booking</h5></em>
-	<p class="text-light text-center">&copy; <?php echo date('Y');?> - Developed By Sujoy Dcunha, Christina Pereira, Mark Coutinho</p>
+		Check Available Flight</h5></em>
+	<p class="text-light text-center">&copy; <?php echo date('Y');?> - Developed By Shitta</p>
 </footer>
