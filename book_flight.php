@@ -95,7 +95,7 @@ require 'helpers/init_conn_db.php';
             $result = mysqli_stmt_get_result($stmt);
 
             // echo $result;
-
+        
             while ($row = mysqli_fetch_assoc($result)) {
               $price = (int) $row['Price'] * (int) $passengers;
 
@@ -185,7 +185,7 @@ require 'helpers/init_conn_db.php';
   <em>
     <h5 class="text-light text-center p-0 brand mt-2">
       <img src="assets/images/airtic.png" height="40px" width="40px" alt="">
-     Check Available Flight 
+      Check Available Flight
     </h5>
   </em>
   <p class="text-light text-center">&copy;
