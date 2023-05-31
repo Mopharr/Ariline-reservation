@@ -1,4 +1,4 @@
-<?php include_once 'helpers/helper.php';?>
+<?php include_once 'helpers/helper.php'; ?>
 <?php subview('header.php');
 require 'helpers/init_conn_db.php';
 ?>
@@ -54,18 +54,18 @@ require 'helpers/init_conn_db.php';
     $f_class = $_POST['f_class'];
     $passengers = $_POST['passengers'];
     if ($dep_city === $arr_city) {
-        header('Location: index.php?error=sameval');
-        exit();
+      header('Location: index.php?error=sameval');
+      exit();
     }
     if ($dep_city === '0') {
-        header('Location: index.php?error=seldep');
-        exit();
+      header('Location: index.php?error=seldep');
+      exit();
     }
     if ($arr_city === '0') {
-        header('Location: index.php?error=selarr');
-        exit();
+      header('Location: index.php?error=selarr');
+      exit();
     }
-    ?>
+  ?>
     <div class="container-md mt-2">
       <h1 class="display-4 text-center text-light">FLIGHTS FROM: <br>
         <?php echo $dep_city; ?>
@@ -85,46 +85,45 @@ require 'helpers/init_conn_db.php';
         </thead>
         <tbody>
           <?php
-$sql = 'SELECT * FROM flight WHERE source=?
-         AND Destination=? AND
-         DATE(departure)=?  ORDER BY Price';
-    $stmt = mysqli_stmt_init($conn);
-    if (mysqli_stmt_prepare($stmt, $sql)) {
-        mysqli_stmt_bind_param($stmt, 'sss', $dep_city, $arr_city, $dep_date);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+          $sql = 'SELECT * FROM flight WHERE source=?
+          OR Destination=? ORDER BY Price';
+          $stmt = mysqli_stmt_init($conn);
+          if (mysqli_stmt_prepare($stmt, $sql)) {
+            mysqli_stmt_bind_param($stmt, 'ss', $dep_city, $dep_city);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-        // echo $result;
+            // echo $result;
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            $price = (int) $row['Price'] * (int) $passengers;
+            while ($row = mysqli_fetch_assoc($result)) {
+              $price = (int) $row['Price'] * (int) $passengers;
 
-            if ($type === 'round') {
+              if ($type === 'round') {
                 $price = $price * 2;
-            }
+              }
 
-            if ($f_class == 'B') {
+              if ($f_class == 'B') {
                 $price += 0.5 * $price;
-            }
+              }
 
-            $status = '';
-            $alert = '';
+              $status = '';
+              $alert = '';
 
-            if ($row['status'] === '') {
+              if ($row['status'] === '') {
                 $status = "Not yet Departed";
                 $alert = 'alert-primary';
-            } else if ($row['status'] === 'dep') {
+              } else if ($row['status'] === 'dep') {
                 $status = "Departed";
                 $alert = 'alert-info';
-            } else if ($row['status'] === 'issue') {
+              } else if ($row['status'] === 'issue') {
                 $status = "Delayed";
                 $alert = 'alert-danger';
-            } else if ($row['status'] === 'arr') {
+              } else if ($row['status'] === 'arr') {
                 $status = "Arrived";
                 $alert = 'alert-success';
-            }
+              }
 
-            echo "
+              echo "
       <tr class='text-center'>
         <td>" . $row['airline'] . "</td>
         <td>" . $row['departure'] . "</td>
@@ -139,7 +138,7 @@ $sql = 'SELECT * FROM flight WHERE source=?
         <td>$ " . $price . "</td>
     ";
 
-            if (isset($_SESSION['userId']) && $row['status'] === '') {
+              if (isset($_SESSION['userId']) && $row['status'] === '') {
                 echo "
         <td>
           <form action='pass_form.php' method='post'>
@@ -157,26 +156,26 @@ $sql = 'SELECT * FROM flight WHERE source=?
           </form>
         </td>
       ";
-            } elseif (isset($_SESSION['userId']) && $row['status'] === 'dep') {
+              } elseif (isset($_SESSION['userId']) && $row['status'] === 'dep') {
                 echo "<td>Not Available</td>";
-            } else {
+              } else {
                 echo "<td>Login to continue</td>";
+              }
+              echo '</tr> ';
             }
-            echo '</tr> ';
-        }
-    }
+          }
 
-    ?>
+          ?>
 
 
         </tbody>
       </table>
 
     </div>
-  <?php }?>
+  <?php } ?>
 
 </main>
-<?php subview('footer.php');?>
+<?php subview('footer.php'); ?>
 <footer style="
         position: absolute;
       bottom: 0;
