@@ -1,7 +1,7 @@
 <?php
 require 'helpers/init_conn_db.php';
 
-if (isset($_POST['search_but'])) {
+if (isset($_POST['add_car'])) {
     $ownerName = $_POST['owner_name'];
     $licencesNumber = $_POST['licences_number'];
     $carBrand = $_POST['car_brand'];

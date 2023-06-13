@@ -760,6 +760,7 @@ if (isset($_GET['error'])) {
         echo "<script>alert('Select Arrival city')</script>";
     }
 }
+
 ?>
 <!-- log on to codeastro.com for more projects -->
 <link rel="stylesheet" type="text/css" href="styles%2c_bootstrap4%2c_bootstrap.min.css%2bplugins%2c_font-awesome-4.7.0%2c_css%2c_font-awesome.min.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl.carousel.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl" />
@@ -905,9 +906,9 @@ if (isset($_GET['error'])) {
                             <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
-                        <input type="submit" value="Register Vehicle" name="search_but">
+                        <input type="submit" value="Register Vehicle" name="add_car">
                     </form>
-                </div> 
+                </div>
             </div>
 
 
