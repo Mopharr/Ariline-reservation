@@ -805,7 +805,7 @@ if (isset($_GET['error'])) {
                                             $row['city'] . '</option>';
                                     }
                                     ?> -->
-                            <input type="text" placeholder="Owners Name">
+                            <input type="text" placeholder="Owners Name" name="owner_name">
                             </select>
                         </div>
                         <div class="to">
@@ -824,13 +824,13 @@ if (isset($_GET['error'])) {
                                     }
                                     ?>
                             </select> -->
-                            <input type="text" placeholder="Liences Number">
+                            <input type="text" placeholder="Liences Number" name="licences_number">
 
                         </div>
                         <div class="clear"></div>
                         <div class="class">
                             <h3 style="color: rgba(255, 255, 255, 0.767);">Car Brand</h3>
-                            <select id="w3_country1" name="f_class" onchange="change_country(this.value)" class="frm-field required">
+                            <select id="w3_country1" name="car_brand" onchange="change_country(this.value)" class="frm-field required">
                                 <option value="ACURA">ACURA</option>
                                 <option value="ASTON MARTIN">ASTON MARTIN</option>
                                 <option value="AUDI">AUDI</option>
@@ -881,11 +881,11 @@ if (isset($_GET['error'])) {
                         <div class="date">
                             <div class="depart">
                                 <h3 style="color: rgba(255, 255, 255, 0.767);">Check in Time</h3>
-                                <input class="form-control" name="dep_date" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                                <input class="form-control" name="check_in_time" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
                             </div>
                             <div class="return">
                                 <h3 style="color: rgba(255, 255, 255, 0.767);">Check Out time</h3>
-                                <input class="form-control" name="ret_date" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                                <input class="form-control" name="check_out_time" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
                             </div>
                             <div class="clear"></div>
                         </div>
