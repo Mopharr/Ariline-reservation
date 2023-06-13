@@ -113,6 +113,16 @@ CREATE TABLE `ticket` (
   CONSTRAINT `ticket_ibfk_3` FOREIGN KEY (`passenger_id`) REFERENCES `passenger_profile` (`passenger_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE cars (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  owner_name VARCHAR(255) NOT NULL,
+  licences_number VARCHAR(50) NOT NULL,
+  car_brand VARCHAR(50) NOT NULL,
+  check_in_time TIME NOT NULL,
+  check_out_time TIME NOT NULL,
+  passengers INT NOT NULL
+);
+
 
 INSERT INTO `admin` (`admin_id`, `admin_uname`, `admin_email`, `admin_pwd`) VALUES
 (1, 'admin', 'admin@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW');
