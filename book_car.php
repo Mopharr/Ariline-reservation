@@ -19,6 +19,7 @@ if (isset($_POST['add_car'])) {
 
     if (mysqli_stmt_affected_rows($stmt) > 0) {
         echo '<script>alert("Car registered successfully")</script>';
+        header('Location: parkings.php');
     } else {
         echo '<script>alert("Failed to register car")</script>';
     }
