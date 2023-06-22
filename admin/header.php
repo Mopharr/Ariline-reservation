@@ -55,28 +55,8 @@ button.btn-outline-light:hover {
                     <a class="nav-link" href="index.php">
                       <h5 class="ml-2"> Dashboard</h5>
                     </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="flight.php">
-                      <h5 class="ml-2"> Add Flight</h5>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="all_flights.php">
-                      <h5>List Flights</h5>
-                    </a>
-                  </li>   
-                  <li class="nav-item">
-                    <a class="nav-link" href="list_airlines.php">
-                      <h5>Manage Airlines</h5>
-                    </a>
                   </li>              
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="review.php">
-                      <h4>Reviews</h4>
-                    </a>
-                  </li>                      -->
+            
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li class="nav-item">
@@ -85,15 +65,14 @@ button.btn-outline-light:hover {
                         id="dropdownMenuButton" data-toggle="dropdown" 
                           aria-haspopup="true" aria-expanded="false">
                         
-                        <i class="fa fa-plus text-white"></i> Airlines </td>
+                        <i class="fa fa-plus text-white"></i> Space </td>
                       </button>  
                       <div class="dropdown-menu">
                         <form class="px-2 py-2"  action="../includes/admin/airline.inc.php" method="post">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="airline" 
-                              placeholder="Airlines Name">
-                            <input type="number" class="form-control mt-3" name="seats" 
-                              placeholder="Total Seats">                              
+                         
+                            <input type="number" class="form-control mt-3" name="space" 
+                              placeholder="Total Space">                              
                           </div>  
                           <button type="submit" name="air_but" 
                             class="btn btn-success w-100">Submit</button>

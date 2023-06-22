@@ -22,6 +22,7 @@ mysqli_close($conn);
 <head>
     <title>Car Listing</title>
     <style>
+        
         table {
             border-collapse: collapse;
             width: 100%;

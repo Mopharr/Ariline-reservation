@@ -65,7 +65,7 @@ require 'helpers/init_conn_db.php';
       header('Location: index.php?error=selarr');
       exit();
     }
-  ?>
+    ?>
     <div class="container-md mt-2">
       <h1 class="display-4 text-center text-light">FLIGHTS FROM: <br>
         <?php echo $dep_city; ?>
@@ -94,7 +94,7 @@ require 'helpers/init_conn_db.php';
             $result = mysqli_stmt_get_result($stmt);
 
             // echo $result;
-
+        
             while ($row = mysqli_fetch_assoc($result)) {
               $price = (int) $row['Price'] * (int) $passengers;
 

@@ -46,7 +46,7 @@ if(isset($_COOKIE['Uname']) && isset($_COOKIE['Upwd'])) {
               $_SESSION['userUid'] = $row['username'];
               $_SESSION['userMail'] = $row['email'];                            
               header('Location: views/index.php?login=success');
-              exit();                  
+              exit();                 
           } else {
               header('Location: views/login.php?error=invalidcred');
               exit();                    

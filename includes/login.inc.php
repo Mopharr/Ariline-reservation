@@ -25,8 +25,8 @@ if(isset($_POST['login_but'])) {
                 $_SESSION['userMail'] = $row['email'];
                 setcookie('Uname', $email_id, time() + (86400 * 30), "/");
                 setcookie('Upwd', $password, time() + (86400 * 30), "/");                                
-                header('Location: ../index.php?login=success');
-                exit();                  
+                header('Location: ../addcar.php?login=success');
+                exit();              
             } else {
                 header('Location: ../login.php?error=invalidcred');
                 exit();                    
