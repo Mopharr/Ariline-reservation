@@ -772,10 +772,8 @@ if (isset($_GET['error'])) {
 
 ?>
 <!-- log on to codeastro.com for more projects -->
-<link rel="stylesheet" type="text/css"
-    href="styles%2c_bootstrap4%2c_bootstrap.min.css%2bplugins%2c_font-awesome-4.7.0%2c_css%2c_font-awesome.min.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl.carousel.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl" />
-<meta name="keywords"
-    content="Flight Ticket Booking  Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+<link rel="stylesheet" type="text/css" href="styles%2c_bootstrap4%2c_bootstrap.min.css%2bplugins%2c_font-awesome-4.7.0%2c_css%2c_font-awesome.min.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl.carousel.css%2bplugins%2c_OwlCarousel2-2.2.1%2c_owl" />
+<meta name="keywords" content="Flight Ticket Booking  Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
 <script type="application/x-javascript">
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -798,41 +796,41 @@ if (isset($_GET['error'])) {
             <div class="clearfix"> </div>
             <div class="resp-tabs-container">
                 <div class="tab-1 resp-tab-content roundtrip">
-                    <form action="book_car.php" method="post">
+                    <form action="./book_car.php" method="post">
                         <input type="hidden" name="type" value="round">
                         <div class="from">
                             <h3 style="color: rgba(255, 255, 255, 0.767);">Onwer Name</h3>
                             <!-- <?php
-                            $sql = 'SELECT * FROM Cities ';
-                            $stmt = mysqli_stmt_init($conn);
-                            mysqli_stmt_prepare($stmt, $sql);
-                            mysqli_stmt_execute($stmt);
-                            $result = mysqli_stmt_get_result($stmt);
-                            echo '<select class="" name="dep_city" id="w3_country1">
+                                    $sql = 'SELECT * FROM Cities ';
+                                    $stmt = mysqli_stmt_init($conn);
+                                    mysqli_stmt_prepare($stmt, $sql);
+                                    mysqli_stmt_execute($stmt);
+                                    $result = mysqli_stmt_get_result($stmt);
+                                    echo '<select class="" name="dep_city" id="w3_country1">
 								<option value="0" selected disabled >Departure</option>';
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo '<option value=' . $row['city'] . '>' .
-                                    $row['city'] . '</option>';
-                            }
-                            ?> -->
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo '<option value=' . $row['city'] . '>' .
+                                            $row['city'] . '</option>';
+                                    }
+                                    ?> -->
                             <input type="text" placeholder="Owners Name" name="owner_name">
                             </select>
                         </div>
                         <div class="to">
                             <h3 style="color: rgba(255, 255, 255, 0.767);">Licence Number</h3>
                             <!-- <?php
-                            $sql = 'SELECT * FROM Cities ';
-                            $stmt = mysqli_stmt_init($conn);
-                            mysqli_stmt_prepare($stmt, $sql);
-                            mysqli_stmt_execute($stmt);
-                            $result = mysqli_stmt_get_result($stmt);
-                            echo '<select value="0" name="arr_city" id="w3_country1">
+                                    $sql = 'SELECT * FROM Cities ';
+                                    $stmt = mysqli_stmt_init($conn);
+                                    mysqli_stmt_prepare($stmt, $sql);
+                                    mysqli_stmt_execute($stmt);
+                                    $result = mysqli_stmt_get_result($stmt);
+                                    echo '<select value="0" name="arr_city" id="w3_country1">
 								<option selected disabled>Arrival</option>';
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo '<option value=' . $row['city'] . '>' .
-                                    $row['city'] . '</option>';
-                            }
-                            ?>
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo '<option value=' . $row['city'] . '>' .
+                                            $row['city'] . '</option>';
+                                    }
+                                    ?>
                             </select> -->
                             <input type="text" placeholder="Liences Number" name="licences_number">
 
@@ -840,8 +838,7 @@ if (isset($_GET['error'])) {
                         <div class="clear"></div>
                         <div class="class">
                             <h3 style="color: rgba(255, 255, 255, 0.767);">Car Brand</h3>
-                            <select id="w3_country1" name="car_brand" onchange="change_country(this.value)"
-                                class="frm-field required">
+                            <select id="w3_country1" name="car_brand" onchange="change_country(this.value)" class="frm-field required">
                                 <option value="ACURA">ACURA</option>
                                 <option value="ASTON MARTIN">ASTON MARTIN</option>
                                 <option value="AUDI">AUDI</option>
@@ -892,13 +889,11 @@ if (isset($_GET['error'])) {
                         <div class="date">
                             <div class="depart">
                                 <h3 style="color: rgba(255, 255, 255, 0.767);">Check in Time</h3>
-                                <input class="form-control" name="check_in_time" type="time" onfocus="this.value = '';"
-                                    onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                                <input class="form-control" name="check_in_time" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
                             </div>
                             <div class="return">
                                 <h3 style="color: rgba(255, 255, 255, 0.767);">Check Out time</h3>
-                                <input class="form-control" name="check_out_time" type="time" onfocus="this.value = '';"
-                                    onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                                <input class="form-control" name="check_out_time" type="time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -907,55 +902,19 @@ if (isset($_GET['error'])) {
                         <div class="numofppl">
                             <div class="adults">
                                 <h3 style="color: rgba(255, 255, 255, 0.767);">Passenger</h3>
-                                <!-- <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <input type="hidden" name="passengers" class="input_val" value="1">
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div> -->
-                                <select name="entry_value" class="selectPo" onchange="entry_value(this.value)">
-                                    <option value="A1">A1</option>
-                                    <option value="A2">A2</option>
-                                    <option value="A3">A3</option>
-                                    <option value="A4">A4</option>
-                                    <option value="A5">A5</option>
-                                    <option value="B1">B1</option>
-                                    <option value="B2">B2</option>
-                                    <option value="B3">B3</option>
-                                    <option value="B4">B4</option>
-                                    <option value="B5">B5</option>
-                                    <option value="C1">C1</option>
-                                    <option value="C2">C2</option>
-                                    <option value="C3">C3</option>
-                                    <option value="C4">C4</option>
-                                    <option value="C5">C5</option>
-                                    <option value="D1">D1</option>
-                                    <option value="D2">D2</option>
-                                    <option value="D3">D3</option>
-                                    <option value="D4">D4</option>
-                                    <option value="D5">D5</option>
-                                    <option value="E1">E1</option>
-                                    <option value="E2">E2</option>
-                                    <option value="E3">E3</option>
-                                    <option value="E4">E4</option>
-                                    <option value="E5">E5</option>
-                                    <option value="F1">F1</option>
-                                    <option value="F2">F2</option>
-                                    <option value="F3">F3</option>
-                                    <option value="F4">F4</option>
-                                    <option value="F5">F5</option>
-                                    <option value="G1">G1</option>
-                                    <option value="G2">G2</option>
-                                    <option value="G3">G3</option>
-                                    <option value="G4">G4</option>
-                                    <option value="G5">G5</option>
-                                    <option value="H1">H1</option>
-                                    <option value="H2">H2</option>
-                                    <option value="H3">H3</option>
-                                    <option value="H4">H4</option>
-                                    <option value="H5">H5</option>
+                                <select name="passengers" class="selectPo" onchange="entry_value(this.value)">
+                                    <?php
+                                    $letters = range('A', 'H');
+                                    $numbers = range(1, 5);
+
+                                    foreach ($letters as $letter) {
+                                        foreach ($numbers as $number) {
+                                            $value = $letter . $number;
+                                            $label = $letter . $number;
+                                            echo "<option value=\"$value\">$label</option>";
+                                        }
+                                    }
+                                    ?>
                                 </select>
 
                             </div>
@@ -991,7 +950,7 @@ if (isset($_GET['error'])) {
 
 <script src="assets/js/easyResponsiveTabs.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('#horizontalTab').easyResponsiveTabs({
             type: 'default',
             width: 'auto',
@@ -1000,14 +959,14 @@ if (isset($_GET['error'])) {
     });
 </script>
 <script>
-    $('.value-plus').on('click', function () {
+    $('.value-plus').on('click', function() {
         var divUpd = $(this).parent().find('.value'),
             newVal = parseInt(divUpd.text(), 10) + 1;
         divUpd.text(newVal);
         $('.input_val').val(newVal);
     });
 
-    $('.value-minus').on('click', function () {
+    $('.value-minus').on('click', function() {
         var divUpd = $(this).parent().find('.value'),
             newVal = parseInt(divUpd.text(), 10) - 1;
         if (newVal >= 1) {
@@ -1019,15 +978,15 @@ if (isset($_GET['error'])) {
 <!--//quantity-->
 <!--load more-->
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         size_li = $("#myList li").size();
         x = 1;
         $('#myList li:lt(' + x + ')').show();
-        $('#loadMore').click(function () {
+        $('#loadMore').click(function() {
             x = (x + 1 <= size_li) ? x + 1 : size_li;
             $('#myList li:lt(' + x + ')').show();
         });
-        $('#showLess').click(function () {
+        $('#showLess').click(function() {
             x = (x - 1 < 0) ? 1 : x - 1;
             $('#myList li').not(':lt(' + x + ')').hide();
         });
